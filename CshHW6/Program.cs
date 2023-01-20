@@ -46,6 +46,29 @@ namespace CshHW6
             sh2 -= 144.3;
             sh1.ShowArea();
             sh2.ShowArea();
+            //Console.ReadKey();
+
+            //task 3
+
+            ListOfBooks listOfBooks = new ListOfBooks();
+
+            listOfBooks += "War and Peace";
+            for(int i = 1; i <=20; i++)
+            {
+                listOfBooks += $"Book {i}";
+            }
+
+            listOfBooks.showAll();
+            Console.WriteLine("After deleting book on position(index) #2: ");
+            listOfBooks -= 2;
+            listOfBooks.showAll();
+            listOfBooks.DeleteByName("Book 4");
+            Console.WriteLine("After deleting 'Book 4':");
+            listOfBooks.showAll();
+
+            Console.WriteLine(listOfBooks.FindByName("War and Peace"));
+            Console.WriteLine(listOfBooks.FindByName("War"));
+
             Console.ReadKey();
 
 
